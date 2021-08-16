@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	//change <os.Getenv("ChromeDriver")> to your driverpath
 	driver := agouti.ChromeDriver(os.Getenv("ChromeDriver"), agouti.ChromeOptions("args", []string{"--mute-audio", "--incognito", "start-maximized", "--disable-gpu", "--disable-extensions"}))
 
 	if err := driver.Start(); err != nil {
